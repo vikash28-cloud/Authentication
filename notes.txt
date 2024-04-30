@@ -1,3 +1,5 @@
+Authenticaion -
+
 first create a normal authenticaion by register a user and login using registered data
 uuid = it provides a unique id 
 now we create  a sessionID using uuid  and store this sessionID with the object used for find email, password for login
@@ -20,3 +22,4 @@ cookie-parser is used
 uuid is used for creating sessionID
 
 30:00:00 -> last watched
+
