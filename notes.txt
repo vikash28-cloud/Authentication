@@ -1,0 +1,22 @@
+first create a normal authenticaion by register a user and login using registered data
+uuid = it provides a unique id 
+now we create  a sessionID using uuid  and store this sessionID with the object used for find email, password for login
+
+create a file as auth.js or any other name inside util folder, services as you prefer
+in auth.js create a function setId which take two parameters id and user(object) , map this id and user
+also create getID function which return id
+
+now we create a cookie res.cookie("cookieName",sessionID);
+try login then check cookies in inspectElement -> application -> cookies
+
+
+when we call "/" home route then authmiddleware called first and check for sessionID 
+if cookies has not sessionID then it will redirect to login,
+this process repeats untill user doesnot logged in 
+if user logged in then session id is assinged with that user and we can route open home page 
+
+
+cookie-parser is used 
+uuid is used for creating sessionID
+
+30:00:00 -> last watched
