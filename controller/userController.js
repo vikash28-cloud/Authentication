@@ -26,12 +26,18 @@ async function handleUserLogin(req,res){
         return  res.render("login")
     }
 
-    // session id using uuidv4
-    const sessionId = uuidv4();
-    setUser(sessionId,user);  //now in auth.js we mapped this session id with the user using Maps
-    // now create a cookie
-    res.cookie("uid",sessionId);
+    /*  create cookie for sessions statefull authentication
+        // session id using uuidv4
+        const sessionId = uuidv4();
+        setUser(sessionId,user);  //now in auth.js we mapped this session id with the user using Maps
+        // now create a cookie
+        res.cookie("uid",sessionId);
+    */
 
+    //  create cookie for jwt stateless authentication
+    const token = setUser(user);   //setuser function in auth.js return jet token
+
+    res.cookie("jwt",token);
     res.render("home")
 }
 

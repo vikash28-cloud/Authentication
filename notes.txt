@@ -23,3 +23,11 @@ uuid is used for creating sessionID
 
 30:00:00 -> last watched
 
+
+problem with statefull authenticaion 
+
+ when server reload is occur then user logged out and user have login again;
+
+
+for maintaining short sessions then use sessions like banking websites 
+for maintaining long sessiosns then use tokens 
