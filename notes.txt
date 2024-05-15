@@ -26,7 +26,7 @@ uuid is used for creating sessionID
 
 problem with statefull authenticaion 
 
- when server reload is occur then user logged out and user have login again;
+when server reload is occur then user logged out and user have login again;
 
 
 for maintaining short sessions then use sessions like banking websites 
